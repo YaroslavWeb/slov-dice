@@ -1,0 +1,46 @@
+@import "assets/styles/vars.scss";
+
+.modal-custom {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__window {
+    position: relative;
+    width: 440px;
+    max-height: calc(100vh - 54px * 2);
+    border-radius: 12px;
+    box-shadow: 0px 2px 12px rgba(74, 12, 25, 0.02),
+      0px 5px 40px rgba(16, 18, 83, 0.08), 0px 5px 52px rgba(55, 55, 65, 0.02);
+    backdrop-filter: blur(8px);
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,17 @@
+@import "assets/styles/vars.scss";
+
+.rooms-list {
+  &__list {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-1;
+    color: $color-6;
+    font-weight: 600;
+  }
+}

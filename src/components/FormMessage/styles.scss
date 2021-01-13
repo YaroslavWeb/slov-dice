@@ -1,0 +1,16 @@
+@import "assets/styles/vars.scss";
+
+.form-message {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100vw;
+  position: fixed;
+  padding: 10px 0;
+  bottom: 0;
+  background-color: $color-1;
+
+  > input {
+    width: 90%;
+  }
+}

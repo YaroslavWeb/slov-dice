@@ -1,0 +1,33 @@
+@import "assets/styles/vars.scss";
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+.root-container {
+  height: calc(100vh - 66px - 0.5rem);
+}
+
+.logo {
+  > svg {
+    width: 50px;
+    height: 50px;
+    color: $color-2;
+  }
+}
+
+.navbar {
+  background-color: $color-1;
+  color: $color-2;
+}
+
+a {
+  color: $color-2;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
