@@ -36,7 +36,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "git add . && git commit -m 'fix' && git push heroku master"
+    "deploy": "git add . && git commit -m 'fix' && git push",
+    "heroku": "npm run build && npm run server"
   },
   "eslintConfig": {
     "extends": [
