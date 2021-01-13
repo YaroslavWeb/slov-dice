@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react"
 import ReactDOM from "react-dom"
-import { motion, AnimatePresence } from "framer-motion"
 import { block } from "bem-cn"
 
 import "./styles.scss"
@@ -16,14 +15,9 @@ interface ModalProps {
 
 export const Modal = ({ title, content, isOpen, handleClose }: ModalProps) => {
   return ReactDOM.createPortal(
-    <AnimatePresence>
+    <>
       {isOpen && (
-        <motion.div
-          className={BEM()}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
+        <div className={BEM()}>
           <div className={BEM("overlay")} onClick={handleClose} />
           <div className={BEM("window").mix(["p-2", "p-md-3"])}>
             <div className={BEM("title")}>{title}</div>
@@ -32,9 +26,9 @@ export const Modal = ({ title, content, isOpen, handleClose }: ModalProps) => {
               X
             </span>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>,
+    </>,
     document.getElementById("modal-root")
   )
 }
